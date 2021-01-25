@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -7,7 +6,6 @@ use DB;
 use Session;
 use Illuminate\Support\Facades\Redirect;
 session_start();
-
 class AdminCategoryController extends Controller
 {
    public function index()

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>E-Shop</title>
     <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -26,7 +26,7 @@
 
 
 <style type="text/css">
-    
+
     .paymentWrap {
     padding: 50px;
 }
@@ -103,7 +103,7 @@
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
                                 <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> jubair@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                 </div>
             </div>
         </div><!--/header_top-->
-        
+
         <div class="header-middle"><!--header-middle-->
             <div class="container">
                 <div class="row">
@@ -132,7 +132,7 @@
                         <div class="btn-group pull-right">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    USA
+                                    Bangladesh
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
@@ -140,7 +140,7 @@
                                     <li><a href="#">UK</a></li>
                                 </ul>
                             </div>
-                            
+
                             <div class="btn-group">
                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                     DOLLAR
@@ -158,25 +158,25 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                 
-                               
+
+
 
                                <?php
-                                    $customer_id = Session::get('customer_id'); 
+                                    $customer_id = Session::get('customer_id');
                                 ?>
                                  <?php if($customer_id != NULL) {?>
                                     <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <?php }else{?>
                                     <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                 <?php }?> 
-                               
-                                
+                                 <?php }?>
+
+
 
                                   <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                
+
 
                                 <?php
-                                    $customer_id = Session::get('customer_id'); 
+                                    $customer_id = Session::get('customer_id');
                                 ?>
                                 <?php if($customer_id !=NULL) {?>
                                 <li><a href="{{URL::to('/customer-logout')}}"><i class="fa fa-lock"></i> Logout</a></li>
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div><!--/header-middle-->
-    
+
         <div class="header-bottom"><!--header-bottom-->
             <div class="container">
                 <div class="row">
@@ -210,31 +210,31 @@
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li> 
+                                        <li><a href="product-details.html">Product Details</a></li>
                           <?php
                                 $customer_id = Session::get('customer_id');
                                 $shipping_id = Session::get('shipping_id');
-                                print_r($customer_id);                               
-                                print_r($shipping_id); 
+                                print_r($customer_id);
+                                print_r($shipping_id);
                            ?>
                           <?php if($customer_id != NULL && $shipping_id==NULL) {?>
                                 <li><a href="{{URL::to('/checkout')}}"></i> Checkout</a></li>
                           <?php }if($customer_id != NULL && $shipping_id!=NULL){?>
                                     <li><a href="{{URL::to('/payment')}}"></i> Checkout</a></li>
-                          <?php }else{?> 
+                          <?php }else{?>
                                     <li><a href="{{URL::to('/login-checkout')}}"></i> Checkout</a></li>
                           <?php }?>
-                                    
-                                        <li><a href="{{URL::to('/show-cart')}}">Cart</a></li> 
-                                    
+
+                                        <li><a href="{{URL::to('/show-cart')}}">Cart</a></li>
+
                                     </ul>
-                                </li> 
+                                </li>
                                 <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="blog.html">Blog List</a></li>
                                         <li><a href="blog-single.html">Blog Single</a></li>
                                     </ul>
-                                </li> 
+                                </li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="contact-us.html">Contact</a></li>
                             </ul>
@@ -252,7 +252,7 @@
 
 
         @yield('slider')
-    
+
     <section>
         <div class="container">
             <div class="row">
@@ -261,7 +261,7 @@
                         <h2>Category</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                             <div class="panel panel-default">
-                     
+
                           <?php
                              $all_publicatio_category=DB::table('tbl_category')
                                      ->where('publication_status',1)
@@ -273,10 +273,10 @@
                              </div>
                           </div>
                           <?php } ?>
-                   </div>       
+                   </div>
                 </div><!--/category-products-->
-                         
-                      
+
+
                         <div class="brands_products"><!--brands_products-->
                             <h2>Brands</h2>
                             <div class="brands-name">
@@ -287,13 +287,13 @@
                                      ->where('publication_status',1)
                                      ->get();
                                      foreach ($all_publicatio_manufacture as $manufacture) {?>
-                                    
+
                                     <li><a href="{{URL::to('/product_by_manufacture'.$manufacture->manufacture_id)}}"> <span class="pull-right">(50)</span>{{$manufacture->manufacture_name}}</a></li>
                                     <?php } ?>
                                 </ul>
                             </div>
                         </div><!--/brands_products-->
-                        
+
                         <div class="price-range"><!--price-range-->
                             <h2>Price Range</h2>
                             <div class="well text-center">
@@ -301,23 +301,23 @@
                                  <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
                             </div>
                         </div><!--/price-range-->
-                        
+
                         <div class="shipping text-center"><!--shipping-->
                             <img src="{{asset('frontend/images/home/shipping.jpg')}}" alt="" />
                         </div><!--/shipping-->
-                    
+
                     </div>
                 </div>
-                
+
                 <div class="col-sm-9 padding-right">
                     <div class="features_items"><!--features_items-->
                         @yield('content')
-                    
+
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer id="footer"><!--Footer-->
         <div class="footer-top">
             <div class="container">
@@ -343,7 +343,7 @@
                                 <h2>24 DEC 2014</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
@@ -358,7 +358,7 @@
                                 <h2>24 DEC 2014</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
@@ -373,7 +373,7 @@
                                 <h2>24 DEC 2014</h2>
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-3">
                             <div class="video-gallery text-center">
                                 <a href="#">
@@ -398,7 +398,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-widget">
             <div class="container">
                 <div class="row">
@@ -460,11 +460,11 @@
                             </form>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -473,11 +473,11 @@
                 </div>
             </div>
         </div>
-        
-    </footer><!--/Footer-->
-    
 
-  
+    </footer><!--/Footer-->
+
+
+
     <script src="{{'frontend/js/jquery.js'}}"></script>
     <script src="{{'frontend/js/bootstrap.min.js'}}"></script>
     <script src="{{'frontend/js/jquery.scrollUp.min.js'}}"></script>
