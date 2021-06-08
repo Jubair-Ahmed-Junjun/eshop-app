@@ -1,4 +1,4 @@
-# Laravel-E-commerce Application
+# Laravel E-commerce Application
 
 Download :
 [Eshop App.pdf](https://github.com/Jubair-Ahmed-Junjun/Laravel-E-commerce/files/6613629/Eshop.App.pdf)
